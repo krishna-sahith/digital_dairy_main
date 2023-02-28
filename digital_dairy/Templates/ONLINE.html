@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 10px;
+}
+
+.dropdown {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 200px;
+  background-color:white;
+  border-radius: 10px;
+  border: 1.5px solid dodgerblue;
+  
+
+  
+}
+
+.dropdown li {
+  position: relative;
+}
+
+.dropdown li a {
+  color:rgba(0, 0, 255, 0.719);
+  text-align: left;
+  text-decoration: none;
+  display: block;
+  padding: 8px 18px;
+}
+
+.dropdown li ul {
+  position: absolute;
+  top: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  line-height: normal;
+  background-color: #333;
+  
+
+}
+
+.dropdown li ul li a {
+  text-align: left 10px;
+  color:white;
+  font-size: 14px;
+  padding: 8px 20px;
+  display: block;
+  white-space: nowrap;
+
+}
+
+.dropdown li ul li a:hover {
+  
+  background-color:blue;
+  color: #ffffff;
+}
+
+.dropdown li ul li ul {
+  right:  0;
+  top: 0;
+}
+
+ul li:hover>a {
+  border-radius: 10px;
+  background-color: blue;
+  color: #ffffff !important;
+}
+
+ul li:hover>ul {
+  display: block;
+  
+  
+}
+     *{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+    
+::placeholder {
+  color: rgb(19, 55, 215);
+  opacity: 1; /* Firefox */
+}
+     .cont input{
+    font-size: 14px;
+    border-radius: 1px;
+    border-color:   dodgerblue;;
+    width:200px;
+    border: 1.5px dodgerblue;
+  border-radius: 10px;
+  padding: 10px 12px;
+    border-style:ridge;
+    left:80
+    
+     }
+     .cont button{
+        width: 15%;
+    font-size: 16px;
+    color: white;
+    margin: 40px 0;
+    background-color:rgb(12, 12, 177) ;
+    padding: 8px 12px;
+    border-radius: 8px;
+     }
+     table{
+      padding: 6px;
+     }
+
+</style>
+
+
+<body>
+    <center>
+   
+    <div class="cont" style="color:rgb(48, 13, 174)">
+        <br><br><H4> DIGITAL DAIRY</H4><br>
+        ONLINE COURSE<BR>
+        
+          <br><br><input type="TEXT" name="4" placeholder="FROM : dd-mm-yyyy" >
+          &nbsp;&nbsp;<input type="TEXT" name="5" placeholder="TO : dd-mm-yyyy" >
+       &nbsp;&nbsp;<input type="text" name="26" placeholder="TITLE" >
+       &nbsp;&nbsp; <input type="text" name="13" placeholder="VENUE" ></td>
+    &nbsp;&nbsp; <input type="TEXT" name="13" placeholder="ORGANIZED BY" ></td>
+
+       <br><br>
+       <center >
+  
+        <div class="tab" style="margin-right: -2%;">
+          <table style="padding: 5px;">
+          <td><ul class="dropdown">
+              <li><a href="#">PLATFORM</a>
+                  <ul>
+                      
+                      <li><a href="#">NPTEL</a>
+                        <li><a href="#">UDEMY</a>
+                          <li><a href="#">EDUREKA</a>
+                         <input type="text" placeholder="OTHER PLATFORM" name="123" >
+             
+                      </li>              
+                  </ul>
+              </li></td>
+              <td>&nbsp;&nbsp;</td>
+             <td>
+              <ul class="dropdown">
+                <li><a href="#">AWARDED</a>
+                    <ul>
+                      <li><a href="#">GOLD</a>
+                        <li><a href="#">ELITE</a>
+                          
+                          <li><a href="#">SILVER</a>
+                            <li><a href="#">SUCCESSFULLY COMPLETED</a>
+               
+                        </li>              
+                    </ul>
+                </li>
+              </td>
+          </ul>
+          <td>&nbsp;&nbsp;</td>
+          <td>
+
+            <ul class="dropdown">
+              <li><a href="#">SELECT ROLE</a>
+                  <ul>
+                   
+                      <li><a href="#">RESOURCE PERSON</a>
+                        
+                          <li><a href="#">PARTICIPANT</a>
+             
+                      </li>              
+                  </ul>
+              </li>
+            </td>
+        </ul>
+        <td>&nbsp;&nbsp;</td>
+        <td><td><ul class="dropdown">
+          <li><a href="#">COURSE DURATION</a>
+              <ul>
+               
+                <input type="number" placeholder="NO OF MONTHS" name="123" >
+                <input type="number" placeholder="NO OF WEEKS" name="123" >
+                <input type="number" placeholder="NO OF DAYS" name="123" >
+         
+                  </li>              
+              </ul>
+          </li>
+        
+    </ul></td>
+        </div>
+        
+
+       </table>
+    </div>
+    <br>
+     <input type="file" placeholder="NO OF DAYS" name="123" >
+     &nbsp;&nbsp;<input type="file" placeholder="NO OF DAYS" name="123" >
+    </center>
+<BR>
+
+    <br><BR><br><BR>
+       <center><div class ="cont">&nbsp;&nbsp;<button type="submit"  value="1">SUBMIT</button> </div></center>    
+ </body>
+ </html>

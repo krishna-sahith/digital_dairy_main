@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Profile</title>
+</head>
+<style>
+ *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 10px;
+}
+
+.dropdown {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 200px;
+  background-color:white;
+  border-radius: 10px;
+  border: 1.5px solid dodgerblue;
+
+  
+}
+
+.dropdown li {
+  position: relative;
+}
+
+.dropdown li a {
+  color:dodgerblue;
+  text-align: left;
+  text-decoration: none;
+  display: block;
+  padding: 8px 18px;
+}
+
+.dropdown li ul {
+  position: absolute;
+  top: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  line-height: normal;
+  background-color: #333;
+  
+
+}
+
+.dropdown li ul li a {
+  text-align: left 10px;
+  color:white;
+  font-size: 14px;
+  padding: 8px 20px;
+  display: block;
+  white-space: nowrap;
+
+}
+
+.dropdown li ul li a:hover {
+  
+  background-color:blue;
+  color: #ffffff;
+}
+
+.dropdown li ul li ul {
+  right:  100%;
+  top: 0;
+}
+
+ul li:hover>a {
+  border-radius: 10px;
+  background-color: blue;
+  color: #ffffff !important;
+}
+
+ul li:hover>ul {
+  display: block;
+  left: 100%;
+  top: 30%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+    
+::placeholder {
+  color: rgb(19, 55, 215);
+  opacity: 1; /* Firefox */
+}
+     .cont input{
+    font-size: 12px;
+    border-radius: 1px;
+    border-color:  dodgerblue;
+    width:200px;
+    border: 1.5px dodgerblue;
+  border-radius: 10px;
+  padding: 10px 12px;
+    border-style:ridge;
+    left:80
+    
+     }
+     .cont button{
+        width: 12%;
+        border: 1.5px dodgerblue;
+    font-size: 12px;
+    color: white;
+    margin: 5px 0;
+    background-color:rgb(12, 12, 177) ;
+    padding: 8px 12px;
+    border-radius: 8px;
+     }
+
+img{
+  width:2.5cm;
+  height: 2.5cm;
+    border-radius:50%;
+    
+}
+.one{
+        width:200px;
+        height: 44px;
+        padding: 12px 8px;
+        border: 2px solid dodgerblue;
+        border-radius: 10px;
+        
+        position: relative;
+        font-size: 16px;
+        color: blue;
+}
+</style>
+<body>
+  <center> <h4 style="color: blue;">PROFILE</h4></center>
+  <BR><BR>
+    <center>
+        
+  <img  src="images/profile12.png">
+  <div class="cont" style="color:purple;">
+  
+    <br><br><input type="text" name="2" placeholder="NAME" ><br><BR>
+      <input type="password" name="2" placeholder="PASSWORD" ><br><BR>
+  <input type="email" name="2" placeholder="EMAIL" ><br><BR>
+  <input type="text" name="2" placeholder="DEPARTMENT" ><br><BR>
+    
+        <input type="number" name="2" placeholder="CONTACT NUMBER" ><br><BR>
+  </div>
+    </center>
+  <center>
+    <div >
+      
+        
+          <select class="one">
+            <option value="0" style="background-color: lightgray ; color: dodgerblue;">Faculty</option>
+            <option value="1" style="background-color: lightgray">Professor</option>
+            <option value="2" class="" style="background-color: lightgray">Asst Professor </option>
+           
+           
+          </select>
+
+     
+      
+        </div>
+    
+        <div >
+          <br>
+              <select class="one">
+                <option value="0" style="background-color: lightgray ; color: dodgerblue;">Student</option>
+                <option value="1" style="background-color: lightgray">1<sup>st</sup>Year</option>
+                <option value="1" style="background-color: lightgray">2<sup>nd</sup>Year</option>
+                <option value="1" style="background-color: lightgray">3<sup>rd</sup>Year</option>
+                <option value="1" style="background-color: lightgray">4<sup>th</sup>Year</option> 
+              </select>
+  
+          
+         
+            </div>
+   </center>
+    <center>
+      <br><br>
+      <div class="cont"><button type="submit"  value="1">SUBMIT</button> </div> </center>
+</body>
+</html>

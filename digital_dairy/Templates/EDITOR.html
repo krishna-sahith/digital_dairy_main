@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+         *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+        *{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    input{
+        outline:1px;
+        border: 2px;
+        color: BLUE;
+       
+    
+}
+
+.select-field{
+    border: 1px solid blue;
+}
+.select-field{
+    width: 100%;
+    background-color:blue;
+    border-radius: 2px;
+    border:2px solid blue;
+    
+}
+.task{
+    width: 100%;
+    background-color:lightblue;
+    border-radius: 2px;
+    border: 2px;
+    
+}
+.list{
+    width: 300px;
+    background-color:lightblue;
+    border-radius: 2px;
+    border: 2px solid blue;
+    align-items: center;
+    font-size: 12px;
+    
+}
+.list{
+    box-shadow: 0 30px 60px white;
+    display: none;
+}
+.down-arrow{
+    font-size: 1.2rem;
+    display: inline-block;
+    cursor: pointer;
+     transition: 0.2s linear;
+
+}
+.task{
+    display:block;
+    padding-left:0 ;
+
+}
+.task:hover{
+    background-color: blue;
+}
+.show{
+    display: block;
+}
+.rotatae180deg{
+    transform: rotate(180deg);
+}
+
+     
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 10px;
+}
+
+.dropdown {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 200px;
+  background-color:white;
+  border-radius: 10px;
+  border: 1.5px solid dodgerblue;
+  
+
+  
+}
+.dropdown li {
+  position: relative;
+}
+
+.dropdown li a {
+  color: rgb(19, 55, 215);
+  text-align: left;
+  text-decoration: none;
+  display: block;
+  padding: 8px 18px;
+}
+
+.dropdown li ul {
+  position: absolute;
+  top: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  line-height: normal;
+  background-color: #333;
+  
+
+}
+
+.dropdown li ul li a {
+  text-align: left 10px;
+  color:white;
+  font-size: 12px;
+  padding: 8px 20px;
+  display: block;
+  white-space: nowrap;
+
+}
+
+.dropdown li ul li a:hover {
+  
+  background-color:blue;
+  color: #ffffff;
+}
+
+.dropdown li ul li ul {
+  right:  0;
+  top: 0;
+}
+
+ul li:hover>a {
+  border-radius: 10px;
+  background-color: blue;
+  color:#ffffff !important;
+}
+
+ul li:hover>ul {
+  display: block;
+  
+  
+}
+        *{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+    
+::placeholder {
+  color: rgb(19, 55, 215);
+  
+  opacity: 1; /* Firefox */
+}
+        select{
+            font-size: 12px BOLD;
+    border-radius: 1px;
+    border-color:  dodgerblue;
+    width:210px;
+    border: 1.5px dodgerblue;
+  border-radius: 10px;
+  padding: 10px 12px;
+    border-style:ridge;
+    left:80
+        }
+        option{
+            border: 2px solid blue;
+            padding: 10px 12px;
+            
+        }
+        option:hover>a {
+  border-radius: 10px;
+  background-color: blue;
+        }
+        .cont id,input{
+    font-size: 16px;
+    border-radius: 1px;
+    border-color:  dodgerblue;
+    width:200px;
+    border: 1.5px dodgerblue;
+  border-radius: 10px;
+  padding: 10px 12px;
+    border-style:ridge;
+    left:80
+        }
+        .cont input{
+    font-size: 16px;
+    border-radius: 1px;
+    border-color:  dodgerblue;
+    width:200px;
+    border: 1.5px dodgerblue;
+  border-radius: 10px;
+  padding: 10px 12px;
+    border-style:ridge;
+    left:80
+    
+     }
+     .cont button{
+        width: 15%;
+    font-size: 12px;
+    color: white;
+    margin: 40px 0;
+    background-color:rgb(12, 12, 177) ;
+    padding: 8px 12px;
+    border-radius: 8px;
+     }
+     .one{
+        width:200px;
+        height: 44px;
+        padding: 12px 8px;
+        border: 2px solid dodgerblue;
+        border-radius: 10px;
+        
+        position: relative;
+        font-size: 16px;
+        color: rgb(9, 78, 241);
+        
+    }
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+<br><br>
+<center>
+    <h4 style="color: blue;">DIGITAL DIARY
+     <br><br></h4> <P style="color: BLUE;">CONFERENCE</P>
+     <BR><BR>    
+    <table>
+        <td><ul class="dropdown">
+            <li><a href="#">EDITOR</a>
+                              
+                
+              </td>
+    
+
+<div class="cont">
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td><input type="text"  placeholder="Name of Conference" /></td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+
+    <td>&nbsp;&nbsp;</td>
+    <td><input type="TEXT"  placeholder="From: dd-mm-yyyy " /></td>   
+    <td>&nbsp;&nbsp;&nbsp;</td> 
+    <td> <input type="" placeholder="To: dd-mm-yyyy" /></td>
+     
+</center>
+</table>
+<center>
+    <br><br>
+   <div class="cont" style="color:blue">
+      <table >
+        <td><input type="number"  placeholder="Volume " /></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
+        <td>
+
+          <select class="one">
+            <option value="0" style="background-color: lightgray ; size: 20px;">INDEXING</option>
+            <option value="1" style="background-color: lightgray">UGC</option>
+            <option value="2" class="" style="background-color: lightgray">SCI</option>
+            <option value="3" style="background-color: lightgray">ESCI</option>
+            <option value="4" style="background-color: lightgray">SCOPUS</option>
+            <option value="5" style="background-color: lightgray">Others</option>
+           
+          </select>
+  
+      </td>
+          
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
+          <td>
+
+            <select class="one">
+              <option value="0" style="background-color: lightgray ; size: 20px;">MODE:</option>
+              <option value="1" style="background-color: lightgray">Online</option>
+              <option value="2" class="" style="background-color: lightgray">Offline</option>
+              <option value="3" style="background-color: lightgray">Hybrid</option>
+            </select>
+        </td>
+        
+    <td>&nbsp;&nbsp;&nbsp;</td>
+<td> <input type="text" placeholder="Venue" /></td>
+    </table>
+ </div>
+</div>
+</center>
+<br>
+</table>
+<table>
+  <td><input type="text" placeholder="Organized By" /></td>
+  <td>&nbsp;&nbsp;&nbsp;</td>
+    <td> <input type="FILE" placeholder="" /></td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td> <input type="FILE" placeholder="" /></td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+
+</table>
+<center><div class ="cont">&nbsp;&nbsp;<button type="submit"  value="1">SUBMIT</button> </div></center> 
+</body>
+</html>

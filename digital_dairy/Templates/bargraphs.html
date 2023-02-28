@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .cont input{
+        border:1px solid blue;
+        padding: 25px 0.01%;
+        background-color:darkblue;
+        color: white;
+         
+        
+    }
+    
+</style>
+<center><h4 style="color: darkblue;">DIGITAL DAIRY
+   </h4> <BR><BR>BARGRAPH<br>
+</center>
+    <div class="cont" style="color:dodgerblue;">
+    <form >
+<input  type="number" style="width: 100px; text-align: center; font-size: 20px;border-radius: 5px;"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;past 7 days<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input  type="number" style="width: 100px;text-align: center; font-size: 20px;border-radius: 5px;" ><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total user<br>
+<input  type="number"style="width: 100px;text-align: center; font-size: 20px;border-radius: 5px;" ><br>
+&nbsp;&nbsp;&nbsp;This month
+
+
+
+    </form>
+    <center>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+<canvas id="myChart" style="width:100%;max-width:800px;width:100%;border: 1px solid blue;margin-left: 20%;margin-top: 5%;"></canvas>
+<script >
+var xValues = ["January", "February", "March", "April", "May","June","July","August","September","October","November","December"];
+var yValues = [0, 10, 20, 30, 40];
+var barColors = ["darkblue", "darkblue","darkblue","darkblue","darkblue"];
+var text=["months"];
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    text:"months",    title: {
+      display: true,
+       bottomText:"Months"
+    }
+  }
+});
+
+</script>
+    
+</body>
+
+    </center>
+    </div>
+    
+</html>
