@@ -140,12 +140,13 @@ img{
         color: blue;
 }
 </style>
+{% load static %}
 <body>
   <center> <h4 style="color: blue;">PROFILE</h4></center>
   <BR><BR>
     <center>
         
-  <img  src="images/profile12.png">
+  <img  src="{% static images/profile12.png%}">
   <div class="cont" style="color:purple;">
   
     <br><br><input type="text" name="2" placeholder="NAME" ><br><BR>
