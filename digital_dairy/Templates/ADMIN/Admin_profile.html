@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,66 +141,48 @@ img{
         color: blue;
 }
 </style>
-{% load static %}
 <body>
   <center> <h4 style="color: blue;">PROFILE</h4></center>
   <BR><BR>
     <center>
         
-  <img  src="{% static images/profile12.png%}">
+  <img  src="{% static 'profile12.png' %}">
   <div class="cont" style="color:purple;">
-  
-    <br><br><input type="text" name="2" placeholder="NAME" ><br><BR>
-      <input type="password" name="2" placeholder="PASSWORD" ><br><BR>
-  <input type="email" name="2" placeholder="EMAIL" ><br><BR>
-
-  <select class="one">
-
-                <option value="0" style="background-color: lightgray ; color: dodgerblue;">Department</option>
-                <option value="1" style="background-color: lightgray">CSE</option>
-               <option value="1" style="background-color: lightgray">CSD</option>
-                <option value="1" style="background-color: lightgray">CSM</option>
-      <option value="1" style="background-color: lightgray">ECE</option>
-      <option value="1" style="background-color: lightgray">CIVIL</option>
-      <option value="1" style="background-color: lightgray">MECH</option>
-
-              </select>
+  <form action="admin_profile_form" method="post">
+      {% csrf_token %}
     <br><br>
-        <input type="number" name="2" placeholder="CONTACT NUMBER" ><br><BR>
-  </div>
-    </center>
-  <center>
-    <div >
-      
-        
-          <select class="one">
-            <option value="0" style="background-color: lightgray ; color: dodgerblue;">Faculty</option>
-            <option value="1" style="background-color: lightgray">Professor</option>
-            <option value="2" class="" style="background-color: lightgray">Asst Professor </option>
-           
-           
-          </select>
-
-     
-      
-        </div>
-    
-        <div >
-          <br>
-              <select class="one">
-                <option value="0" style="background-color: lightgray ; color: dodgerblue;">Student</option>
-                <option value="1" style="background-color: lightgray">1<sup>st</sup>Year</option>
-                <option value="1" style="background-color: lightgray">2<sup>nd</sup>Year</option>
-                <option value="1" style="background-color: lightgray">3<sup>rd</sup>Year</option>
-                <option value="1" style="background-color: lightgray">4<sup>th</sup>Year</option> 
-              </select>
-  
-          
-         
-            </div>
-   </center>
-    <center>
+      <input type="text" name="name" placeholder="NAME" ><br><BR>
+      <input type="password" name="password" placeholder="PASSWORD" ><br><BR>
+      <input type="email" name="email" placeholder="EMAIL" ><br><BR>
+      <select class="one" name="department">
+                <option value="0" style="background-color: lightgray ; color: dodgerblue;">Department</option>
+                <option value="CSE" style="background-color: lightgray">CSE</option>
+                <option value="CSD" style="background-color: lightgray">CSD</option>
+                <option value="CSM" style="background-color: lightgray">CSM</option>
+                <option value="ECE" style="background-color: lightgray">ECE</option>
+                <option value="CIVIL" style="background-color: lightgray">CIVIL</option>
+                <option value="MECH" style="background-color: lightgray">MECH</option>
+      </select>
+    <br><br>
+      <input type="number" name="contact" placeholder="CONTACT NUMBER" ><br><BR>
+      <select class="one" name="faculty">
+            <option value="Faculty" style="background-color: lightgray ; color: dodgerblue;">Faculty</option>
+            <option value="Professor" style="background-color: lightgray">Professor</option>
+            <option value="Asst Professor" class="" style="background-color: lightgray">Asst Professor </option>
+      </select>
       <br><br>
-      <div class="cont"><button type="submit"  value="1">SUBMIT</button> </div> </center>
+      <select class="one" name="year">
+                <option value="0" style="background-color: lightgray ; color: dodgerblue;">Student</option>
+                <option value="1st Year" style="background-color: lightgray">1<sup>st</sup>Year</option>
+                <option value="2nd Year" style="background-color: lightgray">2<sup>nd</sup>Year</option>
+                <option value="3rd Year" style="background-color: lightgray">3<sup>rd</sup>Year</option>
+                <option value="4th Year" style="background-color: lightgray">4<sup>th</sup>Year</option>
+      </select>
+      <br><br>
+      <button type="submit"  value="submit">SUBMIT</button>
+
+  </form>
+</div>
+        {{n}}
 </body>
 </html>
