@@ -3,6 +3,6 @@ from . import views
 
 
 urlpatterns = [
-    path('/1',views.auth,name=' '),
+    path('',views.auth,name=' '),
 
 ]
