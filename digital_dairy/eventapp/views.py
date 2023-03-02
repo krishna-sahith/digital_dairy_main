@@ -15,7 +15,7 @@ def one(request):
         name_of_department = request.POST['name_of_department']
         name_of_resource_person = request.POST['name_of_resource_person']
         organized_by = request.POST['organized_by']
-        from_date = request.POST['from_date ']
+        from_date = request.POST['from_date']
         to_date = request.POST['to_date']
         faculty_coordinators = request.POST['faculty_coordinators']
         mode = request.POST['mode']
@@ -36,7 +36,7 @@ def one(request):
                              total_participants=total_participants, file_1=file_1, file_2=file_2)
         try:
             en.save()
-            messages.success(request, "Succcessfully Submitted")
+            messages.success(request, "Successfully Submitted")
         except:
             messages.error(request, "Submission Failed...Retry")
 
