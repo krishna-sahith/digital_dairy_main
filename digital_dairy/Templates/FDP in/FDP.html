@@ -212,6 +212,9 @@ ul li:hover>ul {
         font-size: 16px;
         color: blue;
      }
+     label{
+     color:blue;
+     }
         
         
     </style>
@@ -231,26 +234,24 @@ ul li:hover>ul {
      <BR><BR>
            
     <table>
-        <td><ul class="dropdown" >
-            <li><a href="#">ROLE</a>
-                <ul>
-                  <li><a href="FDP1">RESOURCE PERSON</a>
-                    
-                      <li><a href="FDP2.HTML">PARTICIPANT</a>
-                        
-                        <li><a href="FDP3.HTML">ORGANIZER</a>
-                          <li><a href="FDP4.HTML">ORGANIZING COMMITTEE</a>
-                    </li>              
-                </ul>
+        <td>
+            <select class="one" name="type_of_person">
+         <option value="RESOURCE PERSON" style="background-color: lightgray ; size: 20px;">RESOURCE PERSON</option>
+         <option value="PARTICIPANT" style="background-color: lightgray">PARTICIPANT</option>
+         <option value="ORGANIZER" class="" style="background-color: lightgray">ORGANIZER</option>
+                <option value="ORGANIZER COMMITTEE" class="" style="background-color: lightgray">ORGANIZER COMMITTEE</option>
+
+
+  </select>
             </td>
                 
 
       <td>&nbsp;&nbsp;</td>
-      <td> <input type="text" type="text" name="24" placeholder="Name of the FDP " ></td> 
+      <td> <input type="text" type="text" name="name_of_fdp" placeholder="Name of the FDP " ></td>
               <td>&nbsp;&nbsp; </td> 
-              <td><input type="date"  placeholder="From:dd-mm-yyyy" /></td>
+              <td><label>From:</label><input type="date"  placeholder="From:" name="from_Date" /></td>
               <td>&nbsp;&nbsp; </td> 
-              <td> <input type="date" placeholder="To:dd-mm-yyyy" /></td>
+              <td><label>To:</label> <input type="date" placeholder="To:" name="to_date"/></td>
 </center>
 </table>
 <center>
@@ -268,42 +269,24 @@ ul li:hover>ul {
 </table>
 
 <table>
-  <td> <input type="text" placeholder="Organized By" /></td>
-  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
-  <td>
-  
-    <select class="one">
-      <option value="0" style="background-color: lightgray ; size: 20px;">INDEXING</option>
-      <option value="1" style="background-color: lightgray">UGC</option>
-      <option value="2" class="" style="background-color: lightgray">SCI</option>
-      <option value="3" style="background-color: lightgray">ESCI</option>
-      <option value="4" style="background-color: lightgray">SCOPUS</option>
-      <option value="5" style="background-color: lightgray">Others</option>
-     
-    </select>
-</td>
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
-<td>
+  <td> <input type="text" placeholder="Organized By" name="organized_by"/></td>
+    <td>&nbsp;&nbsp; </td>
+    <td>&nbsp;&nbsp; </td>
+    <td>
  
-  <select class="one">
-    <option value="0" style="background-color: lightgray ; size: 20px;">SPONSORSHIP</option>
-    <option value="1" style="background-color: lightgray">AICTE</option>
-    <option value="2" class="" style="background-color: lightgray">Others</option>
+  <select class="one" name="sponsorship">
+    <option value="SPONSORSHIP" style="background-color: lightgray ; size: 20px;">SPONSORSHIP</option>
+    <option value="AICTE" style="background-color: lightgray">AICTE</option>
+    <option value="OTHER" class="" style="background-color: lightgray">Others</option>
    
   </select>
 </td>
-
-</table>
-
-<table>
-  <br>
-  <td> &nbsp;&nbsp;&nbsp;<input type="file" placeholder=" " /></td>
-  <td> &nbsp;&nbsp;&nbsp;<input type="file" placeholder=" " /></td>
-
+    <td> &nbsp;&nbsp;<label>Photos:</label>&nbsp;<input type="file" placeholder="Photo " name="photo_FDP"/></td>
+  <td> &nbsp;&nbsp;&nbsp;<label>Certificates:</label><input type="file" placeholder="Certificate" name="certificate_FDP"/></td>
 </table>
 
 <br>
-<center><div class ="cont">&nbsp;&nbsp;<button type="submit"  value="1">SUBMIT</button> </div></center> 
+<center><div class ="cont">&nbsp;&nbsp;<button type="submit"  value="submit">SUBMIT</button> </div></center>
 
 
 </body>
