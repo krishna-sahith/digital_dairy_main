@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <style>
@@ -229,85 +229,66 @@ ul li:hover>ul {
      <br><br></h4> <P style="color: BLUE;">EVENT ORGANIZATION</P>
      <BR><BR>
 
-      
-    
-    <table>
+      <form method="post" action="event_organized">
+          {% csrf_token %}
+           <table>
 <td>
-            <select class="one">
-              <option value="0" style="background-color: lightgray ; size: 20px;">Type of Event</option>
-              <option value="1" style="background-color: lightgray">CONFERENCE</option>
-              <option value="2" class="" style="background-color: lightgray">WEBINAR</option>
-              <option value="3" style="background-color: lightgray">SEMINAR</option>
-              <option value="4" style="background-color: lightgray">WORKSHOP</option>
-              <option value="5" style="background-color: lightgray">FDP</option>
-              <option value="5" style="background-color: lightgray">PDP</option>
-              <option value="5" style="background-color: lightgray">STTP</option>
-              <option value="5" style="background-color: lightgray">STC</option>
-              <option value="5" style="background-color: lightgray">Others</option>
-             
+            <select class="one" style="margin-right:100px" name="type_of_event" required>
+              <option value="null" style="background-color: lightgray ; size: 20px;">Type of Event</option>
+              <option value="CONFERENCE" style="background-color: lightgray">CONFERENCE</option>
+              <option value="WEBINAR" class="" style="background-color: lightgray">WEBINAR</option>
+              <option value="SEMINAR" style="background-color: lightgray">SEMINAR</option>
+              <option value="WORKSHOP" style="background-color: lightgray">WORKSHOP</option>
+              <option value="FDP" style="background-color: lightgray">FDP</option>
+              <option value="PDP" style="background-color: lightgray">PDP</option>
+              <option value="STTP" style="background-color: lightgray">STTP</option>
+              <option value="STC" style="background-color: lightgray">STC</option>
+              <option value="Others" style="background-color: lightgray">Others</option>
             </select>
-    
+
         </td>
 
+
 <div class="cont">
-    
-    <td><input type="text"  placeholder="Title of the Event Organized" /></td>
+
+    <td><input type="text"  placeholder="Title of the Event Organized" title="title_of_event_organized" required/></td>
     <td>&nbsp;&nbsp;&nbsp;</td>
-    <td><input type="text"  placeholder="Name of Department " /></td>
+    <td><input type="text"  placeholder="Name of Department " title="name_of_department" required/></td>
 
     <td>&nbsp;&nbsp;&nbsp;</td>
-   <td> <input type="text"   placeholder="Name of  Resource Person " /></td>
+   <td> <input type="text"   placeholder="Name of  Resource Person " title="name_of_resource_person" required/></td>
     <td>&nbsp;&nbsp;&nbsp;</td>
-    <td> <input type="text" placeholder="Organized By" /></td>
+    <td> <input type="text" placeholder="Organized By" title="organized_by" required/></td>
 
-    
+
 </center>
 </table>
 <center>
     <br><br>
       <table>
-        <td><input type="text"  placeholder="From: dd-mm-yyyy " /></td>
+        <td><input type="date"  placeholder="From: dd-mm-yyyy " title="from_date" required/></td>
         <td>&nbsp;&nbsp;&nbsp;</td>
-     <td> <input type="text" placeholder="To: dd-mm-yyyy" /></td>
+     <td> <input type="date" placeholder="To: dd-mm-yyyy" title="to_date" required/></td>
      <td>&nbsp;&nbsp;&nbsp;</td>
      <td> <textarea type="text" style="font-size: 15px;
       border-radius: 1px;
       border-color:  dodgerblue;
-      width:232px;
+      width:400px;
       height:40px;
       color:dodgerblue;
       border: 1.5px dodgerblue;
     border-radius: 10px;
     padding: 10px 8px;
       border-style:ridge;
-      left:80" placeholder="Faculty Co-ordinator(s) Names" ></textarea></td>
-        <td>&nbsp;&nbsp;&nbsp;</td>
-        <td> <textarea type="text" style="font-size: 15px;
-          border-radius: 1px;
-          border-color: dodgerblue;
-          width:232px;
-          height:40px;
-          color:dodgerblue;
-          border: 1.5px dodgerblue;
-        border-radius: 10px;
-        padding: 10px 8px;
-          border-style:ridge;
-          left:80" placeholder="Faculty Co-ordinator(s) Names" ></textarea></td>
-        <td>&nbsp;&nbsp;&nbsp;</td>
-<td>    <ul class="dropdown">
-  <div class="cont" style="color:blue">
-  <li><a href="#">MODE</a>
-      <ul>
+      left:80" placeholder="Faculty Co-ordinator(s) Names" title="faculty_coordinators" required></textarea></td>
+<td>
+     <select class="one" name="mode" required>
+              <option value="null" style="background-color: lightgray ; size: 20px;">MODE</option>
+              <option value="ONLINE" style="background-color: lightgray" >ONLINE</option>
+              <option value="OFFLINE" class="" style="background-color: lightgray">OFFLINE</option>
+            </select>
+</td>
 
-          <li><a href="">ONLINE </a>
-            <li><a href="">OFFLINE</a>
-              <li><a href="">HYBRID</a>
-
-          </li>
-          </li>
-      </ul>
-  </li></td>
- 
     </table>
  </div>
 </div>
@@ -315,27 +296,32 @@ ul li:hover>ul {
 <br><BR>
 </table>
 
-<td> <input type="text" style="width:22%;" placeholder="No. of Faculty Attend From RIT " /></td>
+<td> <input type="number" style="width:22%;" placeholder="No. of Faculty Attend From RIT " title="no_of_faculty_attended" required/></td>
 <td>&nbsp;&nbsp;&nbsp;</td>
-<td> <input type="text" style="width:22%;" placeholder="No. of Students Attend From RIT " /></td>
+<td> <input type="number" style="width:22%;" placeholder="No. of Students Attend From RIT " title="no_of_students_attended_rit" required/></td>
 <td>&nbsp;&nbsp;&nbsp;</td>
-<td> <input type="text" style="width:24%;" placeholder="No. of Students Attend From Outside " /></td>
+<td> <input type="number" style="width:24%;" placeholder="No. of Students Attend From Outside " title="no_of_students_attended_outside" required /></td>
 
 <table>
-  
- 
- <br><br> <td> <input type="text" placeholder="Total Participants" /></td>
+
+
+ <br><br> <td> <input type="number" placeholder="Total Participants" title="total_participants" required/></td>
   <td>&nbsp;&nbsp;&nbsp;</td>
-    <td> <input type="FILE" placeholder="" /></td>
+    <td> <input type="file" placeholder="" title="file_1" required/></td>
     <td>&nbsp;&nbsp;&nbsp;</td>
-<td> <input type="file"  /></td>
+<td> <input type="file" title="file_2" required /></td>
 
 
 
             <td>&nbsp;&nbsp;</td>
 </td>
 </table>
-<center><div class ="cont">&nbsp;&nbsp;<button type="submit"  value="1">SUBMIT</button> </div></center> 
+<center><div class ="cont">&nbsp;&nbsp;<button type="submit">SUBMIT</button> </div></center>
+
+      </form>
+{% for i in messages %}
+{{i}}
+        {% endfor %}
 
 </body>
 </html>

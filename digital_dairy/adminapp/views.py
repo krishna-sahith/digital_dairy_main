@@ -1,5 +1,4 @@
 from django.contrib import messages
-from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from .models import admin_profile_table
 
