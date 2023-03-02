@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from .models import admin_profile_table
@@ -15,10 +16,13 @@ def one(request):
         email = request.POST['email']
         department = request.POST['department']
         contact = request.POST['contact']
-        faculty = request.POST['faculty']
-        year = request.POST['year']
+        Designation = request.POST['Designation']
         en = admin_profile_table(Name=name, Email=email, Password_Admin_Profile=password, Department=department,
-                                 Contact_Number=contact, Faculty_Type=faculty, Student_Year=year)
-        en.save()
-        n = "done"
-        return render(request, 'ADMIN/Admin_profile.html', {'n': n})
+                                 Contact_Number=contact, Designation=Designation)
+        try:
+            en.save()
+            messages.success(request,"Succcessfullt Submitted")
+        except:
+            messages.error(request, "Submission Failed")
+
+        return render(request, 'ADMIN/Admin_profile.html')

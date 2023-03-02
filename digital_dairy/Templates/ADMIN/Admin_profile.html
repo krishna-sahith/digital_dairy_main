@@ -151,10 +151,10 @@ img{
   <form action="admin_profile_form" method="post">
       {% csrf_token %}
     <br><br>
-      <input type="text" name="name" placeholder="NAME" ><br><BR>
-      <input type="password" name="password" placeholder="PASSWORD" ><br><BR>
-      <input type="email" name="email" placeholder="EMAIL" ><br><BR>
-      <select class="one" name="department">
+      <input type="text" name="name" placeholder="NAME" required><br><BR>
+      <input type="password" name="password" placeholder="PASSWORD" required ><br><BR>
+      <input type="email" name="email" placeholder="EMAIL" required ><br><BR>
+      <select class="one" name="department" required>
                 <option value="0" style="background-color: lightgray ; color: dodgerblue;">Department</option>
                 <option value="CSE" style="background-color: lightgray">CSE</option>
                 <option value="CSD" style="background-color: lightgray">CSD</option>
@@ -164,25 +164,24 @@ img{
                 <option value="MECH" style="background-color: lightgray">MECH</option>
       </select>
     <br><br>
-      <input type="number" name="contact" placeholder="CONTACT NUMBER" ><br><BR>
-      <select class="one" name="faculty">
+      <input type="number" name="contact" placeholder="CONTACT NUMBER" required ><br><BR>
+      <select class="one" name="Designation" required>
+            <option value="null" style="background-color: lightgray ; color: dodgerblue;">Designation</option>
             <option value="Faculty" style="background-color: lightgray ; color: dodgerblue;">Faculty</option>
             <option value="Professor" style="background-color: lightgray">Professor</option>
             <option value="Asst Professor" class="" style="background-color: lightgray">Asst Professor </option>
-      </select>
-      <br><br>
-      <select class="one" name="year">
-                <option value="0" style="background-color: lightgray ; color: dodgerblue;">Student</option>
-                <option value="1st Year" style="background-color: lightgray">1<sup>st</sup>Year</option>
-                <option value="2nd Year" style="background-color: lightgray">2<sup>nd</sup>Year</option>
-                <option value="3rd Year" style="background-color: lightgray">3<sup>rd</sup>Year</option>
-                <option value="4th Year" style="background-color: lightgray">4<sup>th</sup>Year</option>
+            <option value="1st Year" style="background-color: lightgray">1<sup>st</sup>Year</option>
+            <option value="2nd Year" style="background-color: lightgray">2<sup>nd</sup>Year</option>
+            <option value="3rd Year" style="background-color: lightgray">3<sup>rd</sup>Year</option>
+            <option value="4th Year" style="background-color: lightgray">4<sup>th</sup>Year</option>
       </select>
       <br><br>
       <button type="submit"  value="submit">SUBMIT</button>
 
   </form>
 </div>
-        {{n}}
+        {% for i in messages %}
+{{i}}
+        {% endfor %}
 </body>
 </html>
