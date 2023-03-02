@@ -20,7 +20,8 @@ urlpatterns = [
 
     path('book/', include('bookapp.urls')),
     path('adminapp/', include('adminapp.urls')),
-    path('', include('eventapp.urls')),
+    path('', include('fdpapp.urls')),
+    path('eventapp/', include('eventapp.urls')),
     path('admin/', admin.site.urls),
 
 ]

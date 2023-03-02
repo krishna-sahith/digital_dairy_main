@@ -232,10 +232,12 @@ ul li:hover>ul {
     <h4 style="color: blue;">DIGITAL DIARY
      <br><br></h4> <P style="color: BLUE;">Faculty Development Program (FDP)</P>
      <BR><BR>
-           
-    <table>
+    <form action="fdp_form" method="post">
+        {% csrf_token %}
+
+        <table>
         <td>
-            <select class="one" name="type_of_person">
+            <select class="one" name="type_of_person_FDP">
          <option value="RESOURCE PERSON" style="background-color: lightgray ; size: 20px;">RESOURCE PERSON</option>
          <option value="PARTICIPANT" style="background-color: lightgray">PARTICIPANT</option>
          <option value="ORGANIZER" class="" style="background-color: lightgray">ORGANIZER</option>
@@ -244,14 +246,14 @@ ul li:hover>ul {
 
   </select>
             </td>
-                
+
 
       <td>&nbsp;&nbsp;</td>
-      <td> <input type="text" type="text" name="name_of_fdp" placeholder="Name of the FDP " ></td>
-              <td>&nbsp;&nbsp; </td> 
-              <td><label>From:</label><input type="date"  placeholder="From:" name="from_Date" /></td>
-              <td>&nbsp;&nbsp; </td> 
-              <td><label>To:</label> <input type="date" placeholder="To:" name="to_date"/></td>
+      <td> <input type="text" type="text" name="name_of_FDP" placeholder="Name of the FDP " ></td>
+              <td>&nbsp;&nbsp; </td>
+              <td><label>From:</label><input type="date"  placeholder="From:" name="from_date_FDP" /></td>
+              <td>&nbsp;&nbsp; </td>
+              <td><label>To:</label> <input type="date" placeholder="To:" name="to_date_FDP"/></td>
 </center>
 </table>
 <center>
@@ -259,8 +261,8 @@ ul li:hover>ul {
 
 <div class="cont">
     <table>
-   
-      
+
+
     </table>
  </div>
 </div>
@@ -269,16 +271,16 @@ ul li:hover>ul {
 </table>
 
 <table>
-  <td> <input type="text" placeholder="Organized By" name="organized_by"/></td>
+  <td> <input type="text" placeholder="Organized By" name="organized_by_FDP"/></td>
     <td>&nbsp;&nbsp; </td>
     <td>&nbsp;&nbsp; </td>
     <td>
- 
-  <select class="one" name="sponsorship">
+
+  <select class="one" name="sponsorship_FDP">
     <option value="SPONSORSHIP" style="background-color: lightgray ; size: 20px;">SPONSORSHIP</option>
     <option value="AICTE" style="background-color: lightgray">AICTE</option>
     <option value="OTHER" class="" style="background-color: lightgray">Others</option>
-   
+
   </select>
 </td>
     <td> &nbsp;&nbsp;<label>Photos:</label>&nbsp;<input type="file" placeholder="Photo " name="photo_FDP"/></td>
@@ -288,6 +290,12 @@ ul li:hover>ul {
 <br>
 <center><div class ="cont">&nbsp;&nbsp;<button type="submit"  value="submit">SUBMIT</button> </div></center>
 
+
+    </form>
+           
+{% for i in messages %}
+{{i}}
+{% endfor %}
 
 </body>
 </html>
