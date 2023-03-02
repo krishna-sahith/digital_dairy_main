@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'bookapp',
     'eventapp',
     'fdpapp',
+    'workshopapp',
 ]
 
 MIDDLEWARE = [

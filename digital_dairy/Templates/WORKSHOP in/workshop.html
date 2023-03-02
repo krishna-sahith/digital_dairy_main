@@ -230,27 +230,28 @@ ul li:hover>ul {
      <br><br></h4> <P style="color: BLUE;">WORKSHOP</P>
      <BR><BR>
      
-    
-        
-    <table>
+    <form method="post" action="workshop">
+        {% csrf_token %}
+
+        <table>
       <td>
 
-        <select class="one">
-          <option value="0" style="background-color: lightgray ; size: 20px;">ROLE</option>
-          <option value="1" style="background-color: lightgray">Author</option>
-          <option value="2" class="" style="background-color: lightgray">Editor</option>
-          
-          
+        <select class="one" name="Role_workshop" required>
+          <option value="null" style="background-color: lightgray ; size: 20px;">ROLE</option>
+          <option value="AUTHOR" style="background-color: lightgray">Author</option>
+          <option value="EDITOR" class="" style="background-color: lightgray">Editor</option>
+
+
         </select>
-    
-    </td> 
+
+    </td>
 
       <td>&nbsp;&nbsp;</td>
-      <td> <input type="text" type="text" name="24" placeholder="Title of the Workshop " ></td> 
-              <td>&nbsp;&nbsp; </td> 
-              <td><input type="text"  placeholder="From:dd-mm-yyyy" /></td>
-              <td>&nbsp;&nbsp; </td> 
-              <td> <input type="text" placeholder="To:dd-mm-yyyy" /></td>
+      <td> <input type="text" type="text" placeholder="Title of the Workshop " name="Title_workshop" required/></td>
+              <td>&nbsp;&nbsp; </td>
+              <td><lable>From:</lable><input type="date"  placeholder="From:dd-mm-yyyy" name="From_date_workshop" required /></td>
+              <td>&nbsp;&nbsp; </td>
+              <td><label>To:</label> <input type="date" placeholder="To:dd-mm-yyyy" name="To_date_workshop" required/></td>
 </center>
 </table>
 <center>
@@ -259,35 +260,35 @@ ul li:hover>ul {
 <div class="cont">
     <table>
       <td>&nbsp;&nbsp;</td>
-   <td> <input type="text"  placeholder="Venue" /></td>
+   <td> <input type="text"  placeholder="Venue" name="Venue_workshop" required/></td>
    <td>&nbsp;&nbsp;&nbsp;</td>
-   <td> <input type="text"  placeholder="Organized By" /></td>
+   <td> <input type="text"  placeholder="Organized By" name="Organized_by_workshop" required /></td>
    <td>&nbsp;&nbsp;&nbsp;</td>
    <td>
 
-    <select class="one">
-      <option value="0" style="background-color: lightgray ; size: 20px;">SPONSORSHIP</option>
-      <option value="1" style="background-color: lightgray">AICTE</option>
-      <option value="2" class="" style="background-color: lightgray">Others</option>
-      
-      
+    <select class="one" name="Organized_by_workshop" required>
+      <option value="null" style="background-color: lightgray ; size: 20px;">SPONSORSHIP</option>
+      <option value="AICTE" style="background-color: lightgray">AICTE</option>
+      <option value="OTHERS" class="" style="background-color: lightgray">Others</option>
+
+
     </select>
 
-</td>  
+</td>
 <td>
 
-  <select class="one">
-    <option value="0" style="background-color: lightgray ; size: 20px;">MODE:</option>
-    <option value="1" style="background-color: lightgray">Online</option>
-    <option value="2" class="" style="background-color: lightgray">Offline</option>
-    <option value="2" class="" style="background-color: lightgray">Hybrid</option>
-    
-    
+  <select class="one" name="Mode_workshop" required>
+    <option value="null" style="background-color: lightgray ; size: 20px;">MODE:</option>
+    <option value="ONLINE" style="background-color: lightgray">Online</option>
+    <option value="OFFLINE" class="" style="background-color: lightgray">Offline</option>
+    <option value="HYBRID" class="" style="background-color: lightgray">Hybrid</option>
+
+
   </select>
 
-</td>   
-      
-      
+</td>
+
+
 <td>&nbsp;&nbsp;&nbsp;</td>
     </table>
  </div>
@@ -297,9 +298,9 @@ ul li:hover>ul {
 </table>
 <br>
 <table>
-  <td> <input type="file" placeholder="" /></td>
+  <td><label>Image :</label> <input type="file" placeholder="" name="Image_workshop" required/></td>
   <td>&nbsp;&nbsp;&nbsp;</td>
-  <td> <input type="file" placeholder="" /></td>
+  <td><label>Certificate :</label> <input type="file" placeholder="" name="Certificate_workshop" required /></td>
 
 
 </table>
@@ -307,8 +308,14 @@ ul li:hover>ul {
 
 
 <br>
-<center><div class ="cont">&nbsp;&nbsp;<button type="submit"  value="1">SUBMIT</button> </div></center> 
+<center><div class ="cont">&nbsp;&nbsp;<button type="submit"  value="submit">SUBMIT</button> </div></center>
 
+
+    </form>
+        
+{% for i in messages %}
+{{i}}
+{% endfor %}
 
 </body>
 </html>
